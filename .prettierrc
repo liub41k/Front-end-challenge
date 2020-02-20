@@ -1,0 +1,9 @@
+{
+	"quoteProps": "as-needed",
+	"printWidth": 80,
+	"proseWrap": "preserve",
+	"useTabs": true,
+	"tabWidth": 3,
+	"singleQuote": true,
+	"bracketSpacing": true
+}

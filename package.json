@@ -1,0 +1,53 @@
+{
+	"name": "minimal-react-base",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"prelaunch": "rm -rf dist && mkdir .\\dist\\css",
+		"static": "node static-assets.js",
+		"start": "npm run prelaunch && concurrently npm:watch:*",
+		"watch:webpack": "webpack --watch",
+		"watch:static": "watch \"npm run static\" src --ignoreDirectoryPattern /src/js/",
+		"watch:serve": "npx serve ./dist",
+		"build": "npm run prelaunch && NODE_ENV=production concurrently 'webpack' 'npm run static'"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/hankchizljaw/minimal-react-base.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/hankchizljaw/minimal-react-base/issues"
+	},
+	"homepage": "https://github.com/hankchizljaw/minimal-react-base#readme",
+	"devDependencies": {
+		"@babel/core": "^7.7.7",
+		"@babel/preset-env": "^7.7.7",
+		"@babel/preset-react": "^7.7.4",
+		"babel-eslint": "^10.0.3",
+		"babel-loader": "^8.0.6",
+		"concurrently": "^5.0.2",
+		"cssnano": "^4.1.10",
+		"eslint": "^6.8.0",
+		"eslint-config-prettier": "^6.9.0",
+		"eslint-plugin-react": "^7.17.0",
+		"postcss": "^7.0.26",
+		"postcss-import": "^12.0.1",
+		"serve": "^11.3.0",
+		"terser-webpack-plugin": "^2.3.1",
+		"watch": "^1.0.2",
+		"webpack": "^4.41.5",
+		"webpack-cli": "^3.3.10",
+		"webpack-dev-server": "^3.10.3"
+	},
+	"dependencies": {
+		"preact": "^10.1.1",
+		"preact-compat": "^3.19.0",
+		"prop-types": "^15.7.2",
+		"react": "^16.12.0",
+		"react-dom": "^16.12.0"
+	}
+}
