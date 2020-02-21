@@ -1,17 +1,25 @@
 import React from 'react';
-
-import Example from './components/Example.js';
+import { FormInput } from './components/FormInput';
+// import { Banner } from './components/Banner';
+import { Button } from './components/Button';
 
 const App = () => (
-	<article>
-		<h1>Hello, I’m your app, using the minimal React app base.</h1>
-		<p>
-			Head over to{' '}
-			<a href="//github.com/hankchizljaw/minimal-react-base">the repo</a> to
-			find out more info.
-		</p>
-		<Example text="Hi, pal 👋" label="Click me" />
-	</article>
+	<section>
+		<h1>Sign up for the latest updates</h1>
+		<form>
+			<FormInput
+				label="EMAIL ADDRESS"
+				name="mail"
+				type="email"
+				value=""
+				className="input"
+				required
+			/>
+			<Button type="submit" className="btn" />
+		</form>
+		{/* TODO: Banner styles (both) */}
+		{/* TODO: validate logic */}
+	</section>
 );
 
 export default App;
