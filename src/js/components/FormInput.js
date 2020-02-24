@@ -1,5 +1,4 @@
 import React from 'react';
-import { Banner } from './Banner';
 
 export const FormInput = ({
 	name,
@@ -26,7 +25,6 @@ export const FormInput = ({
 				className={className}
 				style={error && { border: 'solid 1px red' }}
 			/>
-			{error && <Banner error />}
 		</>
 	);
 };
