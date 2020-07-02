@@ -24,7 +24,7 @@ const App = () => {
 		}
 	};
 
-	const [darkMode, setDarkMode] = useState(getInitialMode());
+	const [darkMode, setDarkMode] = useState(getInitialMode);
 
 	useEffect(() => {
 		localStorage.setItem('dark', JSON.stringify(darkMode));
@@ -39,7 +39,7 @@ const App = () => {
 						<input
 							type="checkbox"
 							checked={darkMode}
-							onChange={() => setDarkMode(prevMode => !prevMode)}
+							onChange={() => setDarkMode((prevMode) => !prevMode)}
 							className="checkbox"
 							id="checkbox"
 						/>
